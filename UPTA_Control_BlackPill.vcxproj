@@ -30,7 +30,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -38,7 +38,7 @@
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>NotSet</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -187,14 +187,20 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="COM_port.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Program_ver.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="serialib2.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="UPTA_Control_BlackPill.h" />
     <ClInclude Include="UPTA_Control_BlackPillDlg.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="COM_port.cpp" />
+    <ClCompile Include="Debug_levels.cpp" />
+    <ClCompile Include="Motor_ctrl_functions.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -203,6 +209,7 @@
     </ClCompile>
     <ClCompile Include="UPTA_Control_BlackPill.cpp" />
     <ClCompile Include="UPTA_Control_BlackPillDlg.cpp" />
+    <ClCompile Include="UPTA_Control_Command.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="UPTAControlBlackPill.rc" />
